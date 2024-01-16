@@ -2,11 +2,20 @@ import React from "react";
 import { Route, Outlet } from "react-router-dom";
 import HomePage from "Pages/Public/Home";
 import NoMatch from "Pages/NoMatch";
-import DetailsPage from "Pages/Public/Details";
 import PurchasedPage from "Pages/Public/Purchased";
+import Navigation from "Components/Shared/Navigation";
+import Footer from "Components/Shared/Footer";
 
 const LandingLayout = () => {
-  return <Outlet />
+  return (
+    <div>
+      <Navigation />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
+  )
 };
 
 export default function routes() {
@@ -14,7 +23,6 @@ export default function routes() {
     <>
       <Route path={"/"} element={<LandingLayout />}>
         <Route index element={<HomePage />} />
-        <Route path={'/details/:id'} element={<DetailsPage />} />
         <Route path={'/last-purchased'} element={<PurchasedPage />} />
         <Route path={'*'} element={<NoMatch />} />
       </Route>

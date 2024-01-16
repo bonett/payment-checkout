@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import store from 'Store';
 import App from 'App';
 import reportWebVitals from './reportWebVitals';
+import 'Theme/index.scss';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
