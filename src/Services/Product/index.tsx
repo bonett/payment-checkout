@@ -23,5 +23,5 @@ export const getProducts = async () => {
 
 export const getProductDetails = async (id: string) => {
     const products: Product[] = await getProducts();
-    return products.filter((product: Product) => product.id === id);
+    return products.filter((product: Product) => product.id === id)[0];
 }
