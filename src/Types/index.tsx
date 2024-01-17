@@ -12,3 +12,15 @@ export interface ProductState {
     loading: boolean;
     error: string | null;
 }
+
+export interface UserState {
+    formStep: number;
+    isOpenModal: boolean;
+    number: string;
+    name: string;
+    expiry: string;
+    cvc: string;
+    focus: string | undefined;
+    responsePayment: any;
+    productSelected: Product | null
+}

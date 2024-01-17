@@ -1,8 +1,9 @@
 /* eslint-disable */
 import React from "react";
-import { type Product } from "Types";
-import TextTruncate from "react-text-truncate";
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { onSelectedProduct } from "Store/userSlice";
+import type { Product } from "Types";
+import { moneyFormatter } from "Utils";
 
 function ProductItem({ product }: { product: Product }) {
   const {
@@ -13,6 +14,7 @@ function ProductItem({ product }: { product: Product }) {
     description,
     currency_id: currencyId,
   } = product;
+  const dispatch = useDispatch();
 
   return (
     <article key={id} className="article-content">
@@ -21,21 +23,12 @@ function ProductItem({ product }: { product: Product }) {
       </div>
       <div className="article-content_description">
         <h2 className="article-content_title">{title}</h2>
-        <TextTruncate
-          line={4}
-          element="p"
-          truncateText="…"
-          text={description}
-        />
+        <p className="article-content_parragraph">{description}</p>
         <div className="article-content_action">
           <h6 className="article-content_price">
-            {price.toLocaleString("es-CO", {
-              currency: currencyId,
-              style: "currency",
-              minimumFractionDigits: 0
-            })}
+            {moneyFormatter(price, currencyId)}
           </h6>
-          <button className="btn-primary">Comprar</button>
+          <button className="btn-primary" onClick={() => dispatch(onSelectedProduct(product))}>{'Comprar'}</button>
         </div>
       </div>
     </article>

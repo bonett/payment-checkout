@@ -80,3 +80,5 @@ export const RESPONSE_SERVER = [
       "Aute enim dolore aute non. Tempor magna excepteur ut sit Lorem irure deserunt in proident. Voluptate mollit ea occaecat magna tempor eu sunt cupidatat enim cupidatat minim magna tempor pariatur. Quis velit proident in duis velit pariatur amet adipisicing veniam voluptate non aliquip non in.",
   },
 ];
+
+export const TAXES = 712836;

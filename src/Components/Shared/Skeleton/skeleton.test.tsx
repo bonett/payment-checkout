@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Skeleton from './';
+import Skeleton from '.';
 
 test('renders Skeleton', () => {
   render(<Skeleton />);

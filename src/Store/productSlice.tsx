@@ -1,13 +1,13 @@
 /* eslint-disable */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { getProducts } from 'Services/Product';
-import { ProductState } from 'Types';
+import type { ProductState } from 'Types';
 
-const initialState: ProductState = {
+const initialState = {
     productData: null,
     loading: false,
     error: null,
-};
+} as ProductState;
 
 export const fetchProduct = createAsyncThunk(
     'products/fetchProducts', async () => {
