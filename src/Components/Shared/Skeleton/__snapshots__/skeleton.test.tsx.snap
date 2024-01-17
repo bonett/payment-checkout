@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Skeleton component Should renders skeleton component 1`] = `
+<div>
+  <div
+    class="skeleton-content"
+  >
+    <article
+      class="article-content skeleton-wrapper"
+      data-testid="skeleton-card"
+    >
+      <div
+        class="article-content_thumb"
+      >
+        <div
+          class="skeleton skeleton-img"
+        />
+      </div>
+      <div
+        class="article-content_description"
+      >
+        <div
+          class="skeleton skeleton-text"
+        />
+        <div
+          class="skeleton skeleton-text"
+        />
+        <div
+          class="skeleton skeleton-text"
+        />
+        <div
+          class="skeleton skeleton-text"
+        />
+      </div>
+    </article>
+    <article
+      class="article-content skeleton-wrapper"
+      data-testid="skeleton-card"
+    >
+      <div
+        class="article-content_thumb"
+      >
+        <div
+          class="skeleton skeleton-img"
+        />
+      </div>
+      <div
+        class="article-content_description"
+      >
+        <div
+          class="skeleton skeleton-text"
+        />
+        <div
+          class="skeleton skeleton-text"
+        />
+        <div
+          class="skeleton skeleton-text"
+        />
+        <div
+          class="skeleton skeleton-text"
+        />
+      </div>
+    </article>
+    <article
+      class="article-content skeleton-wrapper"
+      data-testid="skeleton-card"
+    >
+      <div
+        class="article-content_thumb"
+      >
+        <div
+          class="skeleton skeleton-img"
+        />
+      </div>
+      <div
+        class="article-content_description"
+      >
+        <div
+          class="skeleton skeleton-text"
+        />
+        <div
+          class="skeleton skeleton-text"
+        />
+        <div
+          class="skeleton skeleton-text"
+        />
+        <div
+          class="skeleton skeleton-text"
+        />
+      </div>
+    </article>
+    <article
+      class="article-content skeleton-wrapper"
+      data-testid="skeleton-card"
+    >
+      <div
+        class="article-content_thumb"
+      >
+        <div
+          class="skeleton skeleton-img"
+        />
+      </div>
+      <div
+        class="article-content_description"
+      >
+        <div
+          class="skeleton skeleton-text"
+        />
+        <div
+          class="skeleton skeleton-text"
+        />
+        <div
+          class="skeleton skeleton-text"
+        />
+        <div
+          class="skeleton skeleton-text"
+        />
+      </div>
+    </article>
+    <article
+      class="article-content skeleton-wrapper"
+      data-testid="skeleton-card"
+    >
+      <div
+        class="article-content_thumb"
+      >
+        <div
+          class="skeleton skeleton-img"
+        />
+      </div>
+      <div
+        class="article-content_description"
+      >
+        <div
+          class="skeleton skeleton-text"
+        />
+        <div
+          class="skeleton skeleton-text"
+        />
+        <div
+          class="skeleton skeleton-text"
+        />
+        <div
+          class="skeleton skeleton-text"
+        />
+      </div>
+    </article>
+    <article
+      class="article-content skeleton-wrapper"
+      data-testid="skeleton-card"
+    >
+      <div
+        class="article-content_thumb"
+      >
+        <div
+          class="skeleton skeleton-img"
+        />
+      </div>
+      <div
+        class="article-content_description"
+      >
+        <div
+          class="skeleton skeleton-text"
+        />
+        <div
+          class="skeleton skeleton-text"
+        />
+        <div
+          class="skeleton skeleton-text"
+        />
+        <div
+          class="skeleton skeleton-text"
+        />
+      </div>
+    </article>
+  </div>
+</div>
+`;

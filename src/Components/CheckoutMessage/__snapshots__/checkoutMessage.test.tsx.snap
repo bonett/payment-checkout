@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckoutMessage component Should renders CheckoutMessage component 1`] = `
+<div>
+  <div
+    class="message-content"
+  >
+    <h2>
+      Payment successfully
+    </h2>
+    <div
+      class="message-content_wrapper"
+    >
+      <p>
+        You have bought 1 
+        Iphone 12
+         
+        <br />
+         for
+         
+        $ 12.321
+         
+        <br />
+         
+        <br />
+        <strong>
+          Thank you, Enjoy it !
+        </strong>
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CheckoutMessage component Should renders error in component 1`] = `
+<div>
+  <div
+    class="message-content"
+  >
+    <h2>
+      Error, something was wrong
+    </h2>
+  </div>
+</div>
+`;

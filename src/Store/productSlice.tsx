@@ -6,7 +6,7 @@ import type { ProductState } from 'Types';
 const initialState = {
     productData: null,
     loading: false,
-    error: null,
+    error: null
 } as ProductState;
 
 export const fetchProduct = createAsyncThunk(

@@ -11,7 +11,7 @@ const initialState = {
   name: "",
   focus: "",
   productSelected: null,
-  responsePayment: null
+  responsePayment: null,
 } as UserState;
 
 const userSlice = createSlice({

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreditCard component Should renders CreditCard component 1`] = `
+<div>
+  <div
+    class="rccs"
+  >
+    <div
+      class="rccs__card rccs__card--unknown"
+    >
+      <div
+        class="rccs__card--front"
+      >
+        <div
+          class="rccs__card__background"
+        />
+        <div
+          class="rccs__issuer"
+        />
+        <div
+          class="rccs__cvc__front"
+        />
+        <div
+          class="rccs__number"
+        >
+          •••• •••• •••• ••••
+        </div>
+        <div
+          class="rccs__name"
+        >
+          YOUR NAME HERE
+        </div>
+        <div
+          class="rccs__expiry"
+        >
+          <div
+            class="rccs__expiry__valid"
+          >
+            valid thru
+          </div>
+          <div
+            class="rccs__expiry__value"
+          >
+            ••/••
+          </div>
+        </div>
+        <div
+          class="rccs__chip"
+        />
+      </div>
+      <div
+        class="rccs__card--back"
+      >
+        <div
+          class="rccs__card__background"
+        />
+        <div
+          class="rccs__stripe"
+        />
+        <div
+          class="rccs__signature"
+        />
+        <div
+          class="rccs__cvc"
+        />
+        <div
+          class="rccs__issuer"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
