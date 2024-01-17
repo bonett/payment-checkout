@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Outlet } from "react-router-dom";
 import HomePage from "Pages/Public/Home";
 import NoMatch from "Pages/NoMatch";
-import PurchasedPage from "Pages/Public/Purchased";
 import Navigation from "Components/Shared/Navigation";
 import Footer from "Components/Shared/Footer";
 
@@ -23,7 +22,6 @@ export default function routes() {
     <>
       <Route path={"/"} element={<LandingLayout />}>
         <Route index element={<HomePage />} />
-        <Route path={'/last-purchased'} element={<PurchasedPage />} />
         <Route path={'*'} element={<NoMatch />} />
       </Route>
     </>

@@ -1,22 +1,25 @@
-/* eslint-disable */
-import React, { useEffect } from "react";
-import { AppDispatch } from "Store";
-import { fetchProduct } from "Store/productSlice";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
 import ProductList from "Components/Products/List";
-import SkeletonLoader from "Components/Skeleton";
+import SkeletonLoader from "Components/Shared/Skeleton";
+import Modal from "Components/Shared/Modal";
+import CheckoutForm from "Components/CheckoutForm";
+import { useProducts } from "Hooks/useProducts";
 
 function HomePage() {
-  const dispatch = useDispatch<AppDispatch>();
-  const products = useSelector((state: any) => state.products.productData);
-
-  useEffect(() => {
-    dispatch(fetchProduct())
-  }, []);
+  const { products, loading, isOpenModal, onCloseModal } = useProducts();
 
   return (
     <div className="container">
-      {products ? <ProductList products={products} /> : <SkeletonLoader />}
+      <>
+        {!loading && products ? (
+          <ProductList products={products} />
+        ) : (
+          <SkeletonLoader />
+        )}
+      </>
+      <Modal open={isOpenModal} onClose={onCloseModal} title={"Checkout"}>
+        <CheckoutForm />
+      </Modal>
     </div>
   );
 }

@@ -11,11 +11,6 @@ function Navigation() {
                     <Link to={'/'}>
                         <img src={Logo} alt={'pay'} className="nav-content_logo" />
                     </Link>
-                    <div>
-                        <button className="btn-outlined">
-                            Last Purchased
-                        </button>
-                    </div>
                 </div>
             </div>
         </nav>
