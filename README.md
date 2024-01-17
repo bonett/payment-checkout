@@ -19,6 +19,10 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+
+<img width="390" alt="Screenshot 2024-01-17 at 13 37 55" src="https://github.com/bonett/payment-checkout/assets/8261459/90929214-3877-4a80-846e-08b8c1d76e1f">
+
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -44,3 +48,15 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## Attach
+
+<img width="1369" alt="Screenshot 2024-01-17 at 14 11 00" src="https://github.com/bonett/payment-checkout/assets/8261459/5fa16aa8-2f26-46a5-b131-6f2212c9a458">
+<img width="853" alt="Screenshot 2024-01-17 at 14 11 27" src="https://github.com/bonett/payment-checkout/assets/8261459/e999b1b7-86e7-40cb-8a2b-42fa5fce255b">
+<img width="648" alt="Screenshot 2024-01-17 at 14 12 40" src="https://github.com/bonett/payment-checkout/assets/8261459/c8308ff7-37cc-4ca7-9ee8-0e7fb6a93995">
+<img width="739" alt="Screenshot 2024-01-17 at 14 12 46" src="https://github.com/bonett/payment-checkout/assets/8261459/6fd82c4a-261e-4ae0-b11b-8f5c383fe2eb">
+
+
+
+
