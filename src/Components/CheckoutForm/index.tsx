@@ -11,7 +11,9 @@ import { useProducts } from "Hooks/useProducts";
 function CheckoutForm() {
   const { formStep, handleChangeStepper, makePaymentProduct, loading, error } =
     usePayment();
-  const { responsePayment } = useSelector((state: any) => state.user);
+  const { responsePayment, number, expiry, name, cvc } = useSelector(
+    (state: any) => state.user
+  );
   const { onCloseModal } = useProducts();
 
   return (
@@ -62,7 +64,9 @@ function CheckoutForm() {
             <button
               type="button"
               className="btn-primary"
-              disabled={false}
+              disabled={
+                (number === "" && expiry === "") || name === "" || cvc === ""
+              }
               onClick={() => handleChangeStepper(2)}
             >
               {"Continue"}

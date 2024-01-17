@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation component Should renders navigation component 1`] = `
+<div>
+  <nav
+    class="nav-content"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="nav-content_wrapper"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt="pay"
+            class="nav-content_logo"
+            src="logo.png"
+          />
+        </a>
+      </div>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`Navigation component Should validate logo img 1`] = `
+<div>
+  <nav
+    class="nav-content"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="nav-content_wrapper"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt="pay"
+            class="nav-content_logo"
+            src="logo.png"
+          />
+        </a>
+      </div>
+    </div>
+  </nav>
+</div>
+`;

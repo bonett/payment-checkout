@@ -22,7 +22,7 @@ function CreditCardForm() {
       </div>
 
       <div className="form-content_naming">
-        <label>{"Enter card number"}</label>
+        <label>{"Enter holdname"}</label>
         <input
           type="text"
           name="name"
@@ -35,7 +35,7 @@ function CreditCardForm() {
       </div>
 
       <div className="form-content_naming">
-        <label>{"Enter card number"}</label>
+        <label>{"Enter expiry date"}</label>
         <input
           type="text"
           name="expiry"
@@ -48,7 +48,7 @@ function CreditCardForm() {
       </div>
 
       <div className="form-content_naming">
-        <label>{"Enter card number"}</label>
+        <label>{"Enter cvc code"}</label>
         <input
           type="tel"
           name="cvc"

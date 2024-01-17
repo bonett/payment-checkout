@@ -20,7 +20,7 @@ export const useProducts = () => {
   const { productData: products, loading } = useSelector(
     (state: any) => state.products
   );
-  const { productSelected, isOpenModal } = useSelector(
+  const { productSelected, isOpenModal, isMounted } = useSelector(
     (state: any) => state.user
   );
 
@@ -53,8 +53,10 @@ export const useProducts = () => {
   }, [productSelected]);
 
   useEffect(() => {
-    dispatch(fetchProduct());
+    if(!products) {
+      dispatch(fetchProduct());
+    }
   }, []);
 
-  return { products, loading, isOpenModal, onCloseModal };
+  return { products, loading, isOpenModal, onCloseModal, fetchProduct };
 };

@@ -6,7 +6,7 @@ function Skeleton() {
         <div className="skeleton-content">
             {
                 [1, 2, 3, 4, 5, 6].map(i => (
-                    <article key={i} className="article-content skeleton-wrapper">
+                    <article key={i} data-testid="skeleton-card" className="article-content skeleton-wrapper">
                         <div className="article-content_thumb">
                             <div className="skeleton skeleton-img"></div>
                         </div>

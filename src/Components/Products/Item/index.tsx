@@ -17,7 +17,7 @@ function ProductItem({ product }: { product: Product }) {
   const dispatch = useDispatch();
 
   return (
-    <article key={id} className="article-content">
+    <article key={id} className="article-content" data-testid="product-card">
       <div className="article-content_thumb">
         <img src={thumbnail} alt={title} />
       </div>
@@ -28,7 +28,7 @@ function ProductItem({ product }: { product: Product }) {
           <h6 className="article-content_price">
             {moneyFormatter(price, currencyId)}
           </h6>
-          <button className="btn-primary" onClick={() => dispatch(onSelectedProduct(product))}>{'Comprar'}</button>
+          <button className="btn-primary" onClick={() => dispatch(onSelectedProduct(product))}>{'Buy'}</button>
         </div>
       </div>
     </article>

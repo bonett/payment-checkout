@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreditCard component Should renders CreditCard component 1`] = `
+<div>
+  <form
+    class="form-content"
+  >
+    <div
+      class="form-content_naming"
+    >
+      <label>
+        Enter card number
+      </label>
+      <input
+        maxlength="16"
+        name="number"
+        placeholder="Card number"
+        type="tel"
+        value=""
+      />
+    </div>
+    <div
+      class="form-content_naming"
+    >
+      <label>
+        Enter holdname
+      </label>
+      <input
+        maxlength="20"
+        name="name"
+        placeholder="Name"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="form-content_naming"
+    >
+      <label>
+        Enter expiry date
+      </label>
+      <input
+        maxlength="5"
+        name="expiry"
+        placeholder="MM/YY"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="form-content_naming"
+    >
+      <label>
+        Enter cvc code
+      </label>
+      <input
+        maxlength="3"
+        name="cvc"
+        placeholder="CVC"
+        type="tel"
+        value=""
+      />
+    </div>
+  </form>
+</div>
+`;

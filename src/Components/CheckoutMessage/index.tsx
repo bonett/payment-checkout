@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { moneyFormatter } from "Utils";
 import React from "react";
+import { moneyFormatter } from "Utils";
 
 function CheckoutMessage({
   message,

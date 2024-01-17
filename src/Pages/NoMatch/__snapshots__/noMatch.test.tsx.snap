@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Not found page Should be render page 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="not-found"
+    >
+      <h2
+        class="not-found_title"
+      >
+        Page Not Found
+      </h2>
+      <a
+        href="/"
+      >
+        Go Home
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Not found page Should go home button clicked 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="not-found"
+    >
+      <h2
+        class="not-found_title"
+      >
+        Page Not Found
+      </h2>
+      <a
+        href="/"
+      >
+        Go Home
+      </a>
+    </div>
+  </div>
+</div>
+`;

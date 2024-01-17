@@ -1,9 +1,33 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import NoMatch from './';
+import React from "react";
+import { fireEvent, render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
+import NoMatch from "./";
 
-test('renders learn react link', () => {
-  render(<NoMatch />);
-  const linkElement = screen.getByText(/404: Page Not Found/i);
-  expect(linkElement).toBeInTheDocument();
+describe("Not found page", () => {
+  test("Should be render page", () => {
+    const { container } = render(
+      <BrowserRouter>
+        <NoMatch />
+      </BrowserRouter>
+    );
+
+    const text = screen.getByText(/Page Not Found/i);
+    const buttonAsLink = screen.getByRole("link", { name: /Go Home/i });
+    expect(text).toBeInTheDocument();
+    expect(buttonAsLink).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
+  });
+
+  test("Should go home button clicked", () => {
+    const { container } = render(
+      <BrowserRouter>
+        <NoMatch />
+      </BrowserRouter>
+    );
+
+    const buttonAsLink = screen.getByRole("link", { name: /Go Home/i });
+    fireEvent.click(buttonAsLink, { button: 0});
+    expect(buttonAsLink).toHaveAttribute("href", "/");
+    expect(container).toMatchSnapshot();
+  });
 });

@@ -22,5 +22,5 @@ export interface UserState {
     cvc: string;
     focus: string | undefined;
     responsePayment: any;
-    productSelected: Product | null
+    productSelected: Product | null;
 }
