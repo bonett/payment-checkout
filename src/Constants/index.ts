@@ -82,3 +82,17 @@ export const RESPONSE_SERVER = [
 ];
 
 export const TAXES = 712836;
+
+export const USER_INITIAL_STATE = {
+  formStep: 1,
+  isOpenModal: false,
+  formData: {
+    number: "",
+    expiry: "",
+    cvc: "",
+    name: "",
+    focus: "",
+  },
+  productSelected: null,
+  responsePayment: null,
+};

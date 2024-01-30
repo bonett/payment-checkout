@@ -5,12 +5,20 @@ import { Provider } from "react-redux";
 import CreditCardComponent from "./";
 import store from "Store";
 
+const data = {
+  number: "4423423423",
+  name: "jhon doe",
+  expiry: "34/25",
+  cvc: "123",
+  focus: "",
+};
+
 describe("CreditCard component", () => {
   test("Should renders CreditCard component", () => {
     const { container } = render(
       <Provider store={store}>
         <BrowserRouter>
-          <CreditCardComponent/>
+          <CreditCardComponent data={data} />
         </BrowserRouter>
       </Provider>
     );

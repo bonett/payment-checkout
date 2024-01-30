@@ -1,52 +1,41 @@
 /* eslint-disable */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AppDispatch } from "Store";
 import { useDispatch, useSelector } from "react-redux";
 import {
   onChangeStep,
-  onHandleCreditCardNumber,
-  onHandleCreditCardName,
-  onHandleCreditCardExpiry,
-  onHandleCreditCardCvc,
-  onHandleCreditCardFocus,
+  onHandleFormData,
   setResponsePayment,
 } from "Store/userSlice";
 import { payementProduct } from "Services/Product";
+import { formFieldEnum } from "Types";
 
 export const usePayment = () => {
+  const [userFormData, setUserFormData] = useState({
+    number: "",
+    expiry: "",
+    cvc: "",
+    name: "",
+    focus: "",
+  });
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
   const dispatch = useDispatch<AppDispatch>();
-  const { formStep, number, name, expiry, cvc, productSelected } = useSelector(
+  const { formStep, productSelected, formData } = useSelector(
     (state: any) => state.user
   );
 
   const handleInputChange = (evt: any, type: string) => {
-    const { value } = evt.target;
+    const value = type in formFieldEnum ?  evt.target.value : evt.target.name;
 
-    if (type === "number") {
-      dispatch(onHandleCreditCardNumber(value));
-    }
-
-    if (type === "name") {
-      dispatch(onHandleCreditCardName(value));
-    }
-
-    if (type === "expiry") {
-      dispatch(onHandleCreditCardExpiry(value));
-    }
-
-    if (type === "cvc") {
-      dispatch(onHandleCreditCardCvc(value));
-    }
-  };
-
-  const handleInputFocus = (evt: any) => {
-    dispatch(onHandleCreditCardFocus(evt.target.name));
+    setUserFormData((prevState) => ({
+      ...prevState,
+      [type]: value,
+    }));
   };
 
   const handleChangeStepper = (step: number) => {
-    if(step < 3) {
+    if (step < 3) {
       dispatch(onChangeStep(step));
     } else {
       dispatch(onChangeStep(step));
@@ -58,9 +47,9 @@ export const usePayment = () => {
     try {
       setLoading(true);
       const response = await payementProduct({
-        number,
-        name,
-        expiry,
+        number: formData.number,
+        name: formData.name,
+        expiry: formData.expiry,
         ...productSelected,
       });
 
@@ -76,16 +65,20 @@ export const usePayment = () => {
     }
   };
 
+  useEffect(() => {
+    dispatch(
+      onHandleFormData({
+        ...userFormData,
+      })
+    );
+  }, [userFormData]);
+
   return {
     formStep,
-    number,
-    name,
-    expiry,
-    cvc,
+    formData,
     productSelected,
     handleChangeStepper,
     handleInputChange,
-    handleInputFocus,
     makePaymentProduct,
     loading,
     error,

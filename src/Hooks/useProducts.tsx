@@ -6,34 +6,29 @@ import { fetchProduct } from "Store/productSlice";
 import {
   onSelectedProduct,
   handleShowModal,
-  onHandleCreditCardNumber,
-  onHandleCreditCardCvc,
-  onHandleCreditCardExpiry,
-  onHandleCreditCardName,
-  onHandleCreditCardFocus,
+  onHandleFormData,
   setResponsePayment,
   onChangeStep,
 } from "Store/userSlice";
+import { USER_INITIAL_STATE } from "Constants";
 
 export const useProducts = () => {
   const dispatch = useDispatch<AppDispatch>();
   const { productData: products, loading } = useSelector(
     (state: any) => state.products
   );
-  const { productSelected, isOpenModal, isMounted } = useSelector(
+  const { productSelected, isOpenModal } = useSelector(
     (state: any) => state.user
   );
 
   const onCloseModal = () => {
-    dispatch(handleShowModal(false));
-    dispatch(onSelectedProduct(null));
-    dispatch(onHandleCreditCardNumber(""));
-    dispatch(onHandleCreditCardCvc(""));
-    dispatch(onHandleCreditCardExpiry(""));
-    dispatch(onHandleCreditCardName(""));
-    dispatch(onHandleCreditCardFocus(""));
-    dispatch(setResponsePayment(null));
-    dispatch(onChangeStep(1));
+    dispatch(onChangeStep(USER_INITIAL_STATE.formStep));
+    dispatch(handleShowModal(USER_INITIAL_STATE.isOpenModal));
+    dispatch(onSelectedProduct(USER_INITIAL_STATE.productSelected));
+    dispatch(setResponsePayment(USER_INITIAL_STATE.responsePayment));
+    dispatch(
+      onHandleFormData(USER_INITIAL_STATE.formData)
+    );
   };
 
   useEffect(() => {
@@ -53,7 +48,7 @@ export const useProducts = () => {
   }, [productSelected]);
 
   useEffect(() => {
-    if(!products) {
+    if (!products) {
       dispatch(fetchProduct());
     }
   }, []);

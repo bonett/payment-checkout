@@ -3,8 +3,8 @@ import React from "react";
 import { usePayment } from "Hooks/usePayment";
 
 function CreditCardForm() {
-  const { number, name, expiry, cvc, handleInputFocus, handleInputChange } =
-    usePayment();
+  const { formData, handleInputChange } = usePayment();
+  const { number, name, expiry, cvc } = formData;
 
   return (
     <form className="form-content">
@@ -16,7 +16,7 @@ function CreditCardForm() {
           placeholder="Card number"
           value={number}
           onChange={(e) => handleInputChange(e, "number")}
-          onFocus={handleInputFocus}
+          onFocus={(e) => handleInputChange(e, "focus")}
           maxLength={16}
         />
       </div>
@@ -29,7 +29,7 @@ function CreditCardForm() {
           placeholder="Name"
           value={name}
           onChange={(e) => handleInputChange(e, "name")}
-          onFocus={handleInputFocus}
+          onFocus={(e) => handleInputChange(e, "focus")}
           maxLength={20}
         />
       </div>
@@ -42,7 +42,7 @@ function CreditCardForm() {
           placeholder="MM/YY"
           value={expiry}
           onChange={(e) => handleInputChange(e, "expiry")}
-          onFocus={handleInputFocus}
+          onFocus={(e) => handleInputChange(e, "focus")}
           maxLength={5}
         />
       </div>
@@ -55,7 +55,7 @@ function CreditCardForm() {
           placeholder="CVC"
           value={cvc}
           onChange={(e) => handleInputChange(e, "cvc")}
-          onFocus={handleInputFocus}
+          onFocus={(e) => handleInputChange(e, "focus")}
           maxLength={3}
         />
       </div>
@@ -63,4 +63,4 @@ function CreditCardForm() {
   );
 }
 
-export default CreditCardForm;
+export default React.memo(CreditCardForm);

@@ -1,58 +1,43 @@
 /* eslint-disable */
 import { createSlice } from "@reduxjs/toolkit";
+import { USER_INITIAL_STATE } from "Constants";
 import type { UserState } from "Types";
 
-const initialState = {
-  formStep: 3,
-  isOpenModal: false,
-  number: "",
-  expiry: "",
-  cvc: "",
-  name: "",
-  focus: "",
-  productSelected: null,
-  responsePayment: null,
-} as UserState;
+const initialState = USER_INITIAL_STATE as UserState;
 
 const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    onChangeStep: (state, param) => {
-      const { payload } = param;
-      state.formStep = payload;
+    onChangeStep: (state, { payload }) => {
+      return {
+        ...state,
+        formStep: payload,
+      };
     },
-    onSelectedProduct: (state, param) => {
-      const { payload } = param;
-      state.productSelected = payload;
+    onSelectedProduct: (state, { payload }) => {
+      return {
+        ...state,
+        productSelected: payload,
+      };
     },
-    onHandleCreditCardNumber: (state, param) => {
-      const { payload } = param;
-      state.number = payload;
+    onHandleFormData: (state, { payload }) => {
+      return {
+        ...state,
+        formData: payload,
+      };
     },
-    onHandleCreditCardName: (state, param) => {
-      const { payload } = param;1
-      state.name = payload;
+    handleShowModal: (state, { payload }) => {
+      return {
+        ...state,
+        isOpenModal: payload,
+      };
     },
-    onHandleCreditCardExpiry: (state, param) => {
-      const { payload } = param;
-      state.expiry = payload;
-    },
-    onHandleCreditCardCvc: (state, param) => {
-      const { payload } = param;
-      state.cvc = payload;
-    },
-    onHandleCreditCardFocus: (state, param) => {
-      const { payload } = param;
-      state.focus = payload;
-    },
-    handleShowModal: (state, param) => {
-      const { payload } = param;
-      state.isOpenModal = payload;
-    },
-    setResponsePayment: (state, param) => {
-      const { payload } = param;
-      state.responsePayment = payload;
+    setResponsePayment: (state, { payload }) => {
+      return {
+        ...state,
+        responsePayment: payload,
+      };
     },
   },
 });
@@ -61,12 +46,8 @@ const { actions, reducer } = userSlice;
 export const {
   onChangeStep,
   onSelectedProduct,
-  onHandleCreditCardNumber,
-  onHandleCreditCardName,
-  onHandleCreditCardExpiry,
-  onHandleCreditCardCvc,
-  onHandleCreditCardFocus,
+  onHandleFormData,
   handleShowModal,
-  setResponsePayment
+  setResponsePayment,
 } = actions;
 export default reducer;

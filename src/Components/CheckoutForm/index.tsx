@@ -11,9 +11,8 @@ import { useProducts } from "Hooks/useProducts";
 function CheckoutForm() {
   const { formStep, handleChangeStepper, makePaymentProduct, loading, error } =
     usePayment();
-  const { responsePayment, number, expiry, name, cvc } = useSelector(
-    (state: any) => state.user
-  );
+  const { responsePayment, formData } = useSelector((state: any) => state.user);
+  const { number, name, expiry, cvc, focus } = formData;
   const { onCloseModal } = useProducts();
 
   return (
@@ -21,7 +20,7 @@ function CheckoutForm() {
       <>
         {formStep === 1 && (
           <>
-            <CreditCardComponent />
+            <CreditCardComponent data={formData} />
             <CreditCardForm />
           </>
         )}
